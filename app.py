@@ -42,8 +42,15 @@ def home():
 
 @app.route('/learn')
 def learn_home():
-    return render_template("learn.html")
+    return render_template("learn-intro.html")
 
+@app.route('/learn/intro')
+def learn_intro():
+    return render_template("learn-intro.html")
+
+@app.route('/learn/strengths')
+def learn_strengths():
+    return render_template("learn-strengths.html")
 
 @app.route('/quiz')
 def quiz_home():

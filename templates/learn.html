@@ -13,7 +13,7 @@
         <div class="col-md-1">
 
         </div>
-        <div class="col-md-9">
+        <div class="col-md-10">
 
             <ul class="pagination">
                 <li class="page-item">
@@ -21,18 +21,26 @@
                     <span aria-hidden="true">&laquo;</span>
                   </a>
                 </li>
-                <li class="page-item"><a class="page-link" href="#">Intro</a></li>
-                <li class="page-item"><a class="page-link" href="#">Strengths</a></li>
+                <li id="intro-tab" class="page-item"><a class="page-link" href="/learn/intro">Intro</a></li>
+                <li id="strengths-tab" class="page-item"><a class="page-link" href="/learn/strengths">Strengths</a></li>
                 <li class="page-item"><a class="page-link" href="#">Weaknesses</a></li>
+                <li class="page-item"><a class="page-link" href="#">Types 1</a></li>
+                <li class="page-item"><a class="page-link" href="#">Types 2</a></li>
+                <li class="page-item"><a class="page-link" href="#">Pokémon with Multiple Types</a></li>
+
                 <li class="page-item">
                   <a class="page-link" href="#" aria-label="Next">
                     <span aria-hidden="true">&raquo;</span>
                   </a>
                 </li>
               </ul>
-            Learn works
 
         </div>
+    </div>
+    <div class="row">
+      {% block lesson %}
+
+      {% endblock %}
     </div>
 </body>
 
