@@ -8,6 +8,34 @@
     <script>
         var question = {{ question | tojson }}
     </script>
+
+    <style>
+        .option-button{
+            margin:.25rem;
+            width: 15rem;
+        }
+        .enemy-pokemon-text{
+            font-size: 2rem;
+            font-weight: 500;
+        }
+        .pokemon-type-image{
+            height: 1.5rem;
+        }
+        .wrong-answer-reveal{
+            border-color: maroon;
+            opacity: 50%;
+        }
+        .wrong-answer-reveal-correct-answer{
+            border-color: yellowgreen;
+        }
+        .correct-answer-reveal{
+            background-color: green;
+            color:white;
+        }
+        .correct-answer-reveal-wrong-answer{
+            opacity: 50%;
+        }
+    </style>
 </head>
 
 <body>
@@ -30,7 +58,7 @@
         <div class="col-md-1">
 
         </div>
-        <div class="col-md-9">
+        <div class="col-md-10">
             <div id="answer-container">
 
             </div>
