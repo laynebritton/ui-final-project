@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<head>
+
+    <script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
+    <script>
+        var question = {{ question | tojson }}
+    </script>
+</head>
+
+<body>
+    <!-- <div class="row">
+
+    </div> -->
+    Quiz.html
+    {% block question %}
+
+    {% endblock %}
+
+</body>
+
+{% endblock %}

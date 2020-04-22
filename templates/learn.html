@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<head>
+
+    <script type="text/javascript" src="{{ url_for('static', filename = 'learn.js') }}"></script>
+
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-9">
+
+            <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">Intro</a></li>
+                <li class="page-item"><a class="page-link" href="#">Strengths</a></li>
+                <li class="page-item"><a class="page-link" href="#">Weaknesses</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            Learn works
+
+        </div>
+    </div>
+</body>
+
+{% endblock %}
