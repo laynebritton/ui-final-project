@@ -52,6 +52,22 @@ def learn_intro():
 def learn_strengths():
     return render_template("learn-strengths.html")
 
+@app.route('/learn/weaknesses')
+def learn_weaknesses():
+    return render_template("learn-weaknesses.html")
+
+@app.route('/learn/types1')
+def learn_types1():
+    return render_template("learn-types1.html")
+
+@app.route('/learn/types2')
+def learn_types2():
+    return render_template("learn-types2.html")
+    
+@app.route('/learn/multiple_types')
+def learn_multiple_types():
+    return render_template("learn-multiple-types.html")
+
 @app.route('/quiz')
 def quiz_home():
     temp_workaround = None
