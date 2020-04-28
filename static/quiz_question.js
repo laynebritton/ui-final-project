@@ -1,53 +1,5 @@
 var line_break = $('<br>')
 
-function pokemon_type_span_factory(type_name){
-    var type =$('<img class="img-fluid pokemon-type-image" >')
-    var type_name_lower = type_name.toLowerCase()
-    
-    if(type_name_lower == "fire"){
-        $(type).attr("src","https://cdn.bulbagarden.net/upload/d/d0/FireIC.gif")
-    }
-    if(type_name_lower == "water"){
-        $(type).attr("src","https://cdn.bulbagarden.net/upload/c/cc/WaterIC.gif")
-    }
-    if(type_name_lower == "grass"){
-        $(type).attr("src","https://cdn.bulbagarden.net/upload/8/8a/GrassIC.gif")
-    }
-    if(type_name_lower == "rock"){
-        $(type).attr("src","https://cdn.bulbagarden.net/upload/1/15/RockIC.gif")
-    }
-    if(type_name_lower == "flying"){
-        $(type).attr("src","https://cdn.bulbagarden.net/upload/7/73/FlyingIC.gif")
-    }
-    if(type_name_lower == "fighting"){
-        $(type).attr("src","https://cdn.bulbagarden.net/upload/8/8e/FightingIC.gif")
-    }
-
-    return type
-}
-
-function pokemon_icon_factory(pokemon_name){
-    var pokemon_icon =$('<img class="img-fluid pokemon-icon-image" >')
-    var pokemon_name_lower = pokemon_name.toString().toLowerCase()
-
-    if(pokemon_name_lower == "bulbasaur"){
-        $(pokemon_icon).attr("src","https://cdn.bulbagarden.net/upload/e/ec/001MS.png")
-    }
-    else if(pokemon_name_lower == "squirtle"){
-        $(pokemon_icon).attr("src","https://cdn.bulbagarden.net/upload/9/92/007MS.png")
-    }
-    else if(pokemon_name_lower == "charmander"){
-        $(pokemon_icon).attr("src","https://bulbapedia.bulbagarden.net/wiki/Charmander_(Pok%C3%A9mon)")
-    }
-    else if(pokemon_name_lower == "machop"){
-        $(pokemon_icon).attr("src","https://cdn.bulbagarden.net/upload/6/6c/066MS.png")
-    }
-    else if(pokemon_name_lower == "pidgey"){
-        $(pokemon_icon).attr("src","https://cdn.bulbagarden.net/upload/9/9c/016MS.png")
-    }
-
-    return pokemon_icon
-}
 
 function populate_options(){
     console.log(question['options'])
@@ -67,12 +19,12 @@ function populate_options(){
 function insert_option(option){
     var option_entry = $('<button class="btn btn-dark option-button">')
     
-    $(option_entry).append(pokemon_icon_factory(option.pokemon))
+    $(option_entry).append(pokemon_icon_image_factory(option.pokemon))
 
     var pokemon_name = $("<span>")
     $(pokemon_name).text(option.pokemon + ": ")
     $(option_entry).append(pokemon_name)
-    $(option_entry).append(pokemon_type_span_factory(option.types[0]) )
+    $(option_entry).append(pokemon_type_image_factory(option.types[0]) )
 
     if(option.types[0] == question.answer){
         $(option_entry).addClass("correct-answer")
@@ -92,15 +44,14 @@ function insert_prompt(){
     var sub_header = $('<span class="enemy-pokemon-text" >')
     $(sub_header).text(question.enemy + " ")
     $("#prompt-container").append(sub_header)
-    $("#prompt-container").append(pokemon_type_span_factory(question.types[0]))
+    $("#prompt-container").append(pokemon_type_image_factory(question.types[0]))
 
 
 
 }
 
 function insert_enemy_image(){
-    var image = $('<img class="img-fluid" src="' + question.enemy_image + '">')
-
+    var image = pokemon_full_image_factory(question.enemy)
     $("#enemy-image-container").append(image)
 }
 

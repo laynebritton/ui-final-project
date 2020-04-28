@@ -30,7 +30,7 @@ quiz_questions = [
                 "types": ["Flying"]
             },
         ],
-        "enemy_image": "https://cdn.bulbagarden.net/upload/thumb/4/47/157Typhlosion.png/600px-157Typhlosion.png"
+        
     }
 ]
 
