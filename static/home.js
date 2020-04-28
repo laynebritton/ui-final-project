@@ -1,6 +1,5 @@
 
 $(document).ready(function () {
-
-    console.log("Home")
+    update_active_tab("#home-tab")
 
 })

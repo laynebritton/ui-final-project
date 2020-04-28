@@ -1,11 +1,3 @@
-function set_quiz_tab_to_active(tab) {
-    $("#home-tab").removeClass("active")
-    $("#learn-tab").removeClass("active")
-    $("#quiz-tab").removeClass("active")
-
-    $(tab).addClass("active")
-}
-
 function set_active_learn_tab_to_active(tab) {
     $("#intro-tab").removeClass("active")
     $("#strengths-tab").removeClass("active")
@@ -19,6 +11,6 @@ function set_active_learn_tab_to_active(tab) {
 
 $(document).ready(function () {
 
-    set_quiz_tab_to_active("#learn-tab")
+    update_active_tab("#learn-tab")
 
 })

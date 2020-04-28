@@ -10,8 +10,4 @@ function update_active_tab(tab){
 
 $(document).ready(function () {
 
-    $("#learn-tab").click(function () {
-        update_active_tab("#learn-tab")
-	})    
-
 })

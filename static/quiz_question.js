@@ -49,14 +49,6 @@ function pokemon_icon_factory(pokemon_name){
     return pokemon_icon
 }
 
-function set_quiz_tab_to_active(tab) {
-    $("#home-tab").removeClass("active")
-    $("#learn-tab").removeClass("active")
-    $("#quiz-tab").removeClass("active")
-
-    $(tab).addClass("active")
-}
-
 function populate_options(){
     console.log(question['options'])
     question['options'].forEach(insert_option)
@@ -131,7 +123,7 @@ function populate_page(){
 
 
 $(document).ready(function () {
-    set_quiz_tab_to_active("#quiz-tab")
+    update_active_tab("#quiz-tab")
     
     populate_page()
 
