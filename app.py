@@ -35,8 +35,8 @@ quiz_questions = [
     },
     {
         "enemy": "Machamp",
-        "types": ["fighting"],
-        "answer": "flying",
+        "types": ["Fighting"],
+        "answer": "Flying",
         "options": [
             {
                 "pokemon": "Squirtle",
@@ -58,13 +58,47 @@ quiz_questions = [
         "id": 2
         
     },
+        {
+        "enemy": "Rhydon",
+        "types": ["Rock"],
+        "answer": "Fighting",
+        "options": [
+            {
+                "pokemon": "Geodude",
+                "types": ["Rock"]
+            },
+            {
+                "pokemon": "Charmander",
+                "types": ["Fire"]
+            },
+            {
+                "pokemon": "Machop",
+                "types": ["Fighting"]
+            },
+            {
+                "pokemon": "Pidgey",
+                "types": ["Flying"]
+            },
+        ],
+        "id": 3
+        
+    },
 ]
 
+
+@app.route('/get_next_question', methods=['GET', 'POST'])
+def get_next_question():
+    global quiz_questions
+    json_data = request.get_json()   
+
+    id = json_data["id"]
+
+    results= list(filter(lambda album: album["id"] == id + 1, quiz_questions))
+    return jsonify(question=results[0])
 
 @app.route('/')
 def home():
     return render_template("home.html")
-
 
 @app.route('/learn')
 def learn_home():

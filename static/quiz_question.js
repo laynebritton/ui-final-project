@@ -1,5 +1,6 @@
 var line_break = $('<br>')
-
+var player_score = 0
+var player_questions_answered = 0
 
 function populate_options() {
     console.log(question['options'])
@@ -73,20 +74,69 @@ function insert_player_prompt() {
 }
 
 
+function insert_player_score(){
+    var score = $('<h2>')
+    $(score).text("Your score: " + player_score + " / " + player_questions_answered)
+    $("#score-container").append(score)
+}
 
+function player_answered_correct(){
+    player_score++
+    player_questions_answered++
+}
+
+function player_answered_incorrect(){
+    player_questions_answered++
+}
 
 function populate_page() {
     insert_prompt()
     insert_player_prompt()
     insert_enemy_image()
+    insert_player_score()
     populate_options()
 }
 
+function clear_page(){
+    $("#prompt-container").empty()
+    $("#enemy-image-container").empty()
+    $("#answer-container").empty()
+    $("#score-container").empty()
+}
 
+function load_next_question(){
+    var query ={
+        "id": question.id
+    }
+    $.ajax({
+        type: "POST",
+        url: "get_next_question",                
+        dataType : "json",
+        contentType: "application/json; charset=utf-8",
+        data : JSON.stringify(query),
+        success: function(result){
+            var new_question = result["question"]
+			question = new_question
+
+            clear_page()
+            populate_page()
+        },
+        error: function(request, status, error){
+            console.log("Error");
+            console.log(request)
+            console.log(status)
+            console.log(error)
+        }
+    });
+}
 
 $(document).ready(function () {
     update_active_tab("#quiz-tab")
 
     populate_page()
+
+    $("#next-button").click(function () {
+        load_next_question()
+    })
 
 })

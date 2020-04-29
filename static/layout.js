@@ -78,12 +78,14 @@ var pokemon_full_images = {
     "squirtle": "https://cdn.bulbagarden.net/upload/thumb/3/39/007Squirtle.png/600px-007Squirtle.png",
     "bulbasaur": "https://cdn.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/600px-001Bulbasaur.png",
     "machamp": "https://cdn.bulbagarden.net/upload/thumb/8/8f/068Machamp.png/250px-068Machamp.png",
+    "rhydon": "https://cdn.bulbagarden.net/upload/thumb/4/47/112Rhydon.png/250px-112Rhydon.png",
 }
 
 var pokemon_icon_images ={
     "bulbasaur":"https://cdn.bulbagarden.net/upload/e/ec/001MS.png",
-    "charmander":"https://bulbapedia.bulbagarden.net/wiki/Charmander_(Pok%C3%A9mon)",
+    "charmander":"https://cdn.bulbagarden.net/upload/b/bb/004MS.png",
     "squirtle": "https://cdn.bulbagarden.net/upload/9/92/007MS.png",
     "machop":"https://cdn.bulbagarden.net/upload/6/6c/066MS.png",
     "pidgey":"https://cdn.bulbagarden.net/upload/9/9c/016MS.png",
+    "geodude": "https://cdn.bulbagarden.net/upload/0/04/074MS.png",
 }
