@@ -7,14 +7,39 @@ function populate_options() {
     question['options'].forEach(insert_option)
 
     $(".correct-answer").click(function () {
+        player_answered_correct()
+        update_score()
+        show_next_button()
+
         $("#answer-container").find(".wrong-answer").addClass("correct-answer-reveal-wrong-answer")
+        $("#answer-container").find(".wrong-answer").removeClass("wrong-answer")
+
         $("#answer-container").find(".correct-answer").addClass("correct-answer-reveal")
-    })
-    $(".wrong-answer").click(function () {
-        $("#answer-container").find(".wrong-answer").addClass("wrong-answer-reveal")
-        $("#answer-container").find(".correct-answer").addClass("wrong-answer-reveal-correct-answer")
+        $("#answer-container").find(".correct-answer").removeClass("correct-answer")
 
     })
+    $(".wrong-answer").click(function () {
+        player_answered_incorrect()
+        update_score()
+        show_next_button()
+
+        $("#answer-container").find(".wrong-answer").addClass("wrong-answer-reveal")
+        $("#answer-container").find(".wrong-answer").removeClass("wrong-answer")
+
+        $("#answer-container").find(".correct-answer").addClass("wrong-answer-reveal-correct-answer")
+        $("#answer-container").find(".correct-answer").removeClass("correct-answer")
+
+    })
+}
+
+function check_for_ending(){
+    if(question.id  == 10){
+        clear_page()
+        hide_next_button()
+        var score = $('<h2>')
+        $(score).text("Congratulations, you scored: " + player_score + " / " + player_questions_answered)
+        $("#score-container").append(score)
+    }
 }
 
 function insert_option(option) {
@@ -62,6 +87,15 @@ function insert_prompt() {
 
 }
 
+function hide_next_button(){
+    $("#next-button").addClass("invisible")
+}
+
+function show_next_button(){
+    $("#next-button").removeClass("invisible")
+
+}
+
 function insert_enemy_image() {
     var image = pokemon_full_image_factory(question.enemy)
     $("#enemy-image-container").append(image)
@@ -93,8 +127,15 @@ function populate_page() {
     insert_prompt()
     insert_player_prompt()
     insert_enemy_image()
-    insert_player_score()
     populate_options()
+    update_score()
+    hide_next_button()
+}
+
+function update_score(){
+    $("#score-container").empty()
+    insert_player_score()
+
 }
 
 function clear_page(){
@@ -105,6 +146,8 @@ function clear_page(){
 }
 
 function load_next_question(){
+    check_for_ending()
+
     var query ={
         "id": question.id
     }

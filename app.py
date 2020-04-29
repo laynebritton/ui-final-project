@@ -83,6 +83,182 @@ quiz_questions = [
         "id": 3
         
     },
+    {
+        "enemy": "Ludicolo",
+        "types": ["Water","Grass"],
+        "answer": "Flying",
+        "options": [
+            {
+                "pokemon": "Geodude",
+                "types": ["Rock"]
+            },
+            {
+                "pokemon": "Spearow",
+                "types": ["Flying"]
+            },
+            {
+                "pokemon": "Machop",
+                "types": ["Fighting"]
+            },
+            {
+                "pokemon": "Pidgey",
+                "types": ["Flying"]
+            },
+        ],
+        "id": 4
+        
+    },
+    {
+        "enemy": "Aerodactyl",
+        "types": ["Rock","Flying"],
+        "answer": "Water",
+        "options": [
+            {
+                "pokemon": "Pidgey",
+                "types": ["Flying"]
+            },
+            {
+                "pokemon": "Squirtle",
+                "types": ["Water"]
+            },
+            {
+                "pokemon": "Charmander",
+                "types": ["Fire"]
+            },
+            {
+                "pokemon": "Spearow",
+                "types": ["Flying"]
+            },
+        ],
+        "id": 5
+        
+    },
+    {
+        "enemy": "Breloom",
+        "types": ["Fighting","Grass"],
+        "answer": "Fire",
+        "options": [
+            {
+                "pokemon": "Geodude",
+                "types": ["Rock"]
+            },
+            {
+                "pokemon": "Machop",
+                "types": ["Fighting"]
+            },
+            {
+                "pokemon": "Charmander",
+                "types": ["Fire"]
+            },
+            {
+                "pokemon": "Bulbasaur",
+                "types": ["Grass"]
+            },
+        ],
+        "id": 6
+        
+    },
+    {
+        "enemy": "Charizard",
+        "types": ["Fire","Flying"],
+        "answer": "Rock",
+        "options": [
+            {
+                "pokemon": "Pidgey",
+                "types": ["Flying"]
+            },
+            {
+                "pokemon": "Geodude",
+                "types": ["Rock"]
+            },
+            {
+                "pokemon": "Bulbasaur",
+                "types": ["Grass"]
+            },
+            {
+                "pokemon": "Machop",
+                "types": ["Fighting"]
+            },
+        ],
+        "id": 7
+        
+    },
+    {
+        "enemy": "Poliwrath",
+        "types": ["Water","Fighting"],
+        "answer": "Grass",
+        "options": [
+            {
+                "pokemon": "Bulbasaur",
+                "types": ["Grass"]
+            },
+            {
+                "pokemon": "Charmander",
+                "types": ["Fire"]
+            },
+            {
+                "pokemon": "Geodude",
+                "types": ["Rock"]
+            },
+            {
+                "pokemon": "Machop",
+                "types": ["Fighting"]
+            },
+        ],
+        "id": 8
+        
+    },
+    {
+        "enemy": "Tropius",
+        "types": ["Grass","Flying"],
+        "answer": "Fire",
+        "options": [
+            {
+                "pokemon": "Squirtle",
+                "types": ["Water"]
+            },
+            {
+                "pokemon": "Charmander",
+                "types": ["Fire"]
+            },
+            {
+                "pokemon": "Bulbasaur",
+                "types": ["Grass"]
+            },
+            {
+                "pokemon": "Machop",
+                "types": ["Fighting"]
+            },
+        ],
+        "id": 9
+        
+    },
+        {
+        "enemy": "Omanyte",
+        "types": ["Rock","Water"],
+        "answer": "Grass",
+        "options": [
+            {
+                "pokemon": "Pidgey",
+                "types": ["Flying"]
+            },
+            {
+                "pokemon": "Charmander",
+                "types": ["Fire"]
+            },
+            {
+                "pokemon": "Bulbasaur",
+                "types": ["Grass"]
+            },
+            {
+                "pokemon": "Spearow",
+                "types": ["Flying"]
+            },
+        ],
+        "id": 10
+        
+    },
+    
 ]
 
 

@@ -79,6 +79,13 @@ var pokemon_full_images = {
     "bulbasaur": "https://cdn.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/600px-001Bulbasaur.png",
     "machamp": "https://cdn.bulbagarden.net/upload/thumb/8/8f/068Machamp.png/250px-068Machamp.png",
     "rhydon": "https://cdn.bulbagarden.net/upload/thumb/4/47/112Rhydon.png/250px-112Rhydon.png",
+    "ludicolo": "https://cdn.bulbagarden.net/upload/thumb/f/ff/272Ludicolo.png/250px-272Ludicolo.png",
+    "aerodactyl": "https://cdn.bulbagarden.net/upload/thumb/e/e8/142Aerodactyl.png/250px-142Aerodactyl.png",
+    "charizard": "https://cdn.bulbagarden.net/upload/thumb/7/7e/006Charizard.png/250px-006Charizard.png",
+    "poliwrath": "https://cdn.bulbagarden.net/upload/thumb/2/2d/062Poliwrath.png/250px-062Poliwrath.png",
+    "breloom": "https://cdn.bulbagarden.net/upload/thumb/d/de/286Breloom.png/250px-286Breloom.png",
+    "tropius": "https://cdn.bulbagarden.net/upload/thumb/d/dd/357Tropius.png/250px-357Tropius.png",
+    "omanyte": "https://cdn.bulbagarden.net/upload/thumb/7/79/138Omanyte.png/250px-138Omanyte.png",
 }
 
 var pokemon_icon_images ={
@@ -88,4 +95,5 @@ var pokemon_icon_images ={
     "machop":"https://cdn.bulbagarden.net/upload/6/6c/066MS.png",
     "pidgey":"https://cdn.bulbagarden.net/upload/9/9c/016MS.png",
     "geodude": "https://cdn.bulbagarden.net/upload/0/04/074MS.png",
+    "spearow": "https://cdn.bulbagarden.net/upload/5/5b/021MS.png",
 }
