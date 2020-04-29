@@ -77,6 +77,7 @@ var pokemon_full_images = {
     "typhlosion": "https://cdn.bulbagarden.net/upload/thumb/4/47/157Typhlosion.png/600px-157Typhlosion.png",
     "squirtle": "https://cdn.bulbagarden.net/upload/thumb/3/39/007Squirtle.png/600px-007Squirtle.png",
     "bulbasaur": "https://cdn.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/600px-001Bulbasaur.png",
+    "machamp": "https://cdn.bulbagarden.net/upload/thumb/8/8f/068Machamp.png/250px-068Machamp.png",
 }
 
 var pokemon_icon_images ={

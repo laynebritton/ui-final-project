@@ -10,7 +10,7 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 quiz_questions = [
     {
         "enemy": "Typhlosion",
-        "types": ["fire"],
+        "types": ["Fire"],
         "answer": "Water",
         "options": [
             {
@@ -30,8 +30,34 @@ quiz_questions = [
                 "types": ["Flying"]
             },
         ],
+        "id": 1
         
-    }
+    },
+    {
+        "enemy": "Machamp",
+        "types": ["fighting"],
+        "answer": "flying",
+        "options": [
+            {
+                "pokemon": "Squirtle",
+                "types": ["Water"]
+            },
+            {
+                "pokemon": "Bulbasaur",
+                "types": ["Grass"]
+            },
+            {
+                "pokemon": "Machop",
+                "types": ["Fighting"]
+            },
+            {
+                "pokemon": "Pidgey",
+                "types": ["Flying"]
+            },
+        ],
+        "id": 2
+        
+    },
 ]
 
 
