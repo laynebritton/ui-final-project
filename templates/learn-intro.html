@@ -5,16 +5,44 @@
  
     <script type="text/javascript" src="{{ url_for('static', filename = 'learn-intro.js') }}"></script>
 
+<style>
+    .pokemon-type-image{
+        height: 2rem;
+    }
+
+</style>
+    
 </head>
 <body>
-    <div class="col-md-1">
+    <div class="row">
+        <div class="col-md-1">
 
-    </div>
-    <div class="col-md-10">
-        <div id="learn-container">
-            
         </div>
-        intro works
+        <div class="col-md-10">
+            <div id="learn-container">
+                <h2>Every Pokémon has a <b>type</b>.</h2>
+                <h3>A <b>Type</b> represents what kind of Pokémon each one is.</h3>
+                <br>
+                <h3>Examples of <b>types</b> are: Fire, Water, and Grass</h3>
+            </div>
+        </div>
     </div>
+
+
+    <div class="row">
+        <div class="col-md-1">
+
+        </div> 
+        <div id="fire-container" class="col-md-3">
+
+        </div> 
+        <div id="water-container" class="col-md-3">
+
+        </div> 
+        <div id="grass-container" class="col-md-3">
+
+        </div> 
+    </div>
+
 </body>
 {% endblock %}
