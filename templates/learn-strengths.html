@@ -1,21 +1,35 @@
 {% extends "learn.html" %}
 
 {% block lesson %}
+
 <head>
     <script type="text/javascript" src="{{ url_for('static', filename = 'learn-strengths.js') }}"></script>
 
     <style>
-        .type-card{
-
+        .example-image{
+            height: 15rem;
+            border-radius: 5%;
         }
     </style>
 </head>
-<body>
-    <div class="col-md-1">
 
-    </div>
-    <div class="col-md-10">
-        <span class="badge badge-secondary">Fire</span>
+<body>
+    <div class="row">
+
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-10">
+            <h1>Strengths</h1>
+            <br>
+            <h2>A <b>type</b> that is strong against another type is <b>super-effective</b> against that type</h2>
+
+            <br>
+            <h3>e.g.) The <span class="badge water-span">Water</span> type is super-effective against the <span
+                    class="badge fire-span">Fire</span> type</h3>
+            <br>
+            <img class="img-fluid example-image" src="https://www.wikihow.com/images/thumb/c/c1/Extinguish-a-Fire-at-the-Initial-Stages-Step-6-Version-2.jpg/aid114064-v4-728px-Extinguish-a-Fire-at-the-Initial-Stages-Step-6-Version-2.jpg.webp">
+        </div>
     </div>
 </body>
 {% endblock %}
