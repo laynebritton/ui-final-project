@@ -15,6 +15,32 @@ function pokemon_type_image_factory(type_name){
     return type
 }
 
+function pokemon_type_span_factory(type_name){
+    
+    var type_span = $('<span class="badge">')
+    $(type_span).text(type_name)
+    if(type_name.toLowerCase() == "fire"){
+        $(type_span).addClass("fire-span")
+    }
+    else if (type_name.toLowerCase() == "water"){
+        $(type_span).addClass("water-span")
+    }
+    else if (type_name.toLowerCase() == "grass"){
+        $(type_span).addClass("grass-span")
+    }
+    else if (type_name.toLowerCase() == "flying"){
+        $(type_span).addClass("flying-span")
+    }
+    else if (type_name.toLowerCase() == "rock"){
+        $(type_span).addClass("rock-span")
+    }
+    else if (type_name.toLowerCase() == "fighting"){
+        $(type_span).addClass("fighting-span")
+    }
+
+    return type_span
+}
+
 function pokemon_icon_image_factory(pokemon_name){
     var pokemon_icon =$('<img class="img-fluid pokemon-icon-image" >')
     var pokemon_name_lower = pokemon_name.toString().toLowerCase()
@@ -27,7 +53,6 @@ function pokemon_icon_image_factory(pokemon_name){
 
 function pokemon_full_image_factory(pokemon_name){
     var lower = pokemon_name.toString().toLowerCase()
-    console.log(lower)
     var pokemon_image =$('<img class="img-fluid" >')
     $(pokemon_image).attr("src",pokemon_full_images[lower])
     return pokemon_image
