@@ -1,16 +1,121 @@
 {% extends "learn.html" %}
 
 {% block lesson %}
+
 <head>
     <script type="text/javascript" src="{{ url_for('static', filename = 'learn-types1.js') }}"></script>
+    <style>
+        .nav-buttons {
+            font-size: 1.75rem;
+        }
 
+        .btn {
+            font-size: 1.75rem;
+        }
+        #type-explanations{
+            margin-top: 1rem;
+        }
+        .explanation-text{
+            font-size: 1.5rem;
+        }
+        .example-image {
+            height: 10rem;
+            border-radius: 5%;
+        }
+    </style>
 </head>
-<body>
-    <div class="col-md-1">
 
-    </div>
-    <div class="col-md-10">
-        types1 works
+<body>
+    <div class="row">
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-10">
+            <div class="nav-buttons">
+                <button class="btn fire-span" data-toggle="collapse" href="#fire-type-chart" role="button"
+                    aria-expanded="false" aria-controls="fire-type-chart">Fire</button>
+                <button class="btn water-span" type="button" data-toggle="collapse" data-target="#water-type-chart"
+                    aria-expanded="false" aria-controls="water-type-chart">Water</button>
+                <button class="btn grass-span" type="button" data-toggle="collapse" data-target="#water-type-chart"
+                    aria-expanded="false" aria-controls="water-type-chart">Grass</button>
+                <!-- <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse"
+                    aria-expanded="false" aria-controls="fire-type-chart water-type-chart">Toggle both
+                    elements</button> -->
+            </div>
+            <div id="type-explanations" class="row">
+                <div class="col-md-12">
+                    <div class="collapse multi-collapse" id="fire-type-chart">
+                        <div class="card card-body">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h1> <span class="badge fire-span">Fire</span></h1>
+                                </div>
+                                <div class="col-md-4">
+                                    <img class="img-fluid flipped-image" src="https://cdn.bulbagarden.net/upload/thumb/9/9b/155Cyndaquil.png/250px-155Cyndaquil.png">
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h4>Strengths</h4>
+                                </div>
+                                <div class="col-md-6">
+                                    <h4>Weaknesses</h4>
+                                </div>
+                            </div>
+                            <hr>
+
+                            <div class="row">
+                                <div class="col-md-6 strengths">
+                                    <div class="explanation-text">
+                                        <ui>
+                                            <li>
+                                                <span class="badge grass-span">Grass</span>
+                                                <br>
+                                                <span>Fire burns grass and plants</span>
+                                                <img class="img-fluid example-image"
+                                                src="https://www.wikihow.com/images/thumb/c/ce/Kill-a-Tree-Stump-Step-0-preview.jpg/460px-nowatermark-Kill-a-Tree-Stump-Step-0-preview.jpg">        
+                                            </li>
+                                        </ui>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6 weaknesses">
+                                    <div class="explanation-text">
+                                        <ui>
+                                            <li>
+                                                <span class="badge water-span">Water</span>
+                                                <br>
+                                                <span>Fire burns grass and plants</span>
+                                                <img class="img-fluid example-image"
+                                                src="https://www.wikihow.com/images/thumb/c/ce/Kill-a-Tree-Stump-Step-0-preview.jpg/460px-nowatermark-Kill-a-Tree-Stump-Step-0-preview.jpg">        
+                                            </li>
+                                            <li>
+                                                <span class="badge rock-span">Rock</span>
+                                                <br>
+                                                <span>Fire burns grass and plants</span>
+                                                <img class="img-fluid example-image"
+                                                src="https://www.wikihow.com/images/thumb/c/ce/Kill-a-Tree-Stump-Step-0-preview.jpg/460px-nowatermark-Kill-a-Tree-Stump-Step-0-preview.jpg">        
+                                            </li>
+                                        </ui>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="collapse multi-collapse" id="water-type-chart">
+                        <div class="card card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                            squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                            ea proident.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 {% endblock %}
