@@ -1,16 +1,260 @@
 {% extends "learn.html" %}
 
 {% block lesson %}
+
 <head>
     <script type="text/javascript" src="{{ url_for('static', filename = 'learn-types2.js') }}"></script>
+    <style>
+        .nav-buttons {
+            font-size: 1.75rem;
+        }
 
+        .btn {
+            font-size: 1.75rem;
+        }
+
+        #type-explanations {
+            margin-top: 1rem;
+        }
+
+        .explanation-text {
+            font-size: 1.5rem;
+        }
+
+        .explained-type {
+            font-size: 1.6rem;
+        }
+
+        .example-image {
+            height: 10rem;
+            border-radius: 5%;
+        }
+    </style>
 </head>
-<body>
-    <div class="col-md-1">
 
-    </div>
-    <div class="col-md-10">
-        types2 works
+<body>
+    <div class="row">
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-10">
+            <div class="nav-buttons">
+                <h2>Learn strengths and weaknesses</h2>
+                <button id="flying-collapse" class="btn flying-span" data-toggle="collapse" href="#flying-type-chart"
+                    role="button" aria-expanded="false" aria-controls="flying-type-chart">Flying</button>
+                <button id="rock-collapse" class="btn rock-span" type="button" data-toggle="collapse"
+                    data-target="#rock-type-chart" aria-expanded="false"
+                    aria-controls="rock-type-chart">Rock</button>
+                <button id="fighting-collapse" class="btn fighting-span" type="button" data-toggle="collapse"
+                    data-target="#fighting-type-chart" aria-expanded="false"
+                    aria-controls="fighting-type-chart">Fighting</button>
+            </div>
+            <div id="type-explanations" class="row">
+                <div class="col-md-12">
+                    <div class="collapse multi-collapse" id="flying-type-chart">
+                        <div class="card card-body">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h1> <span class="badge flying-span">Flying</span></h1>
+                                </div>
+                                <div class="col-md-4">
+                                    <img class="img-fluid "
+                                        src="https://cdn.bulbagarden.net/upload/thumb/5/55/016Pidgey.png/250px-016Pidgey.png">
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h4>Strengths</h4>
+                                </div>
+                                <div class="col-md-6">
+                                    <h4>Weaknesses</h4>
+                                </div>
+                            </div>
+                            <hr>
+
+                            <div class="row">
+                                <div class="col-md-6 strengths">
+                                    <div class="explanation-text">
+                                        <ui>
+                                            <li>
+                                                <span class="badge explained-type grass-span">Grass</span>
+                                                <br>
+                                                <span>Birds eat plants</span>
+                                                <br>
+                                                <img class="img-fluid example-image"
+                                                    src="https://www.wikihow.com/images/a/af/Plant-Cherry-Seeds-Step-23-Version-2.jpg">
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <span class="badge explained-type fighting-span">Fighting</span>
+                                                <br>
+                                                <span>It's very difficult to punch a bird</span>
+                                                <br>
+                                                <img class="img-fluid example-image"
+                                                    src="https://www.wikihow.com/images/thumb/8/89/Draw-an-Eagle-Step-18.jpg/v4-459px-Draw-an-Eagle-Step-18.jpg">
+                                            </li>
+                                        </ui>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6 weaknesses">
+                                    <div class="explanation-text">
+                                        <ui>
+                                            <li>
+                                                <span class="badge explained-type rock-span">Rock</span>
+                                                <br>
+                                                <span>Birds are weak to having rocks thrown at them</span>
+                                                <br>
+                                                <img class="img-fluid example-image"
+                                                    src="https://www.wikihow.com/images/thumb/8/87/Throw-a-Shot-Put-Step-8-Version-3.jpg/aid817267-v4-728px-Throw-a-Shot-Put-Step-8-Version-3.jpg.webp">
+                                            </li>
+                                        </ui>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="collapse multi-collapse" id="rock-type-chart">
+                        <div class="card card-body">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h1> <span class="badge rock-span">Rock</span></h1>
+                                </div>
+                                <div class="col-md-4">
+                                    <img class="img-fluid "
+                                        src="https://cdn.bulbagarden.net/upload/thumb/9/98/074Geodude.png/250px-074Geodude.png">
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h4>Strengths</h4>
+                                </div>
+                                <div class="col-md-6">
+                                    <h4>Weaknesses</h4>
+                                </div>
+                            </div>
+                            <hr>
+
+                            <div class="row">
+                                <div class="col-md-6 strengths">
+                                    <div class="explanation-text">
+                                        <ui>
+                                            <li>
+                                                <span class="badge explained-type fire-span">Fire</span>
+                                                <br>
+                                                <span>Rocks contain and extinguish fires</span>
+                                                <br>
+                                                <img class="img-fluid example-image"
+                                                    src="https://www.wikihow.com/images/thumb/f/f3/Make-Fire-Without-Matches-or-a-Lighter-Step-44-Version-3.jpg/aid262870-v4-728px-Make-Fire-Without-Matches-or-a-Lighter-Step-44-Version-3.jpg.webp">
+                                            </li>
+                                        </ui>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6 weaknesses">
+                                    <div class="explanation-text">
+                                        <ui>
+                                            <li>
+                                                <span class="badge explained-type fighting-span">Fighting</span>
+                                                <br>
+                                                <span>Martial artists break rocks</span>
+                                                <br>
+                                                <img class="img-fluid example-image"
+                                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Breaking_technique.jpg/250px-Breaking_technique.jpg">
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <span class="badge explained-type grass-span">Grass</span>
+                                                <br>
+                                                <span>Plants can grow through rocks</span>
+                                                <br>
+                                                <img class="img-fluid example-image"
+                                                    src="https://i.redd.it/8lqa6udxwk231.jpg">
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <span class="badge explained-type water-span">Water</span>
+                                                <br>
+                                                <span>Water erodes rocks</span>
+                                                <br>
+                                                <img class="img-fluid example-image"
+                                                    src="https://guidebooktoenergyandplanetearth.weebly.com/uploads/5/3/5/9/53590201/4542528_orig.jpg">
+                                            </li>
+                                        </ui>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="collapse multi-collapse" id="fighting-type-chart">
+                        <div class="card card-body">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h1> <span class="badge fighting-span">Fighting</span></h1>
+                                </div>
+                                <div class="col-md-4">
+                                    <img class="img-fluid "
+                                        src="https://cdn.bulbagarden.net/upload/thumb/a/a3/107Hitmonchan.png/250px-107Hitmonchan.png">
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h4>Strengths</h4>
+                                </div>
+                                <div class="col-md-6">
+                                    <h4>Weaknesses</h4>
+                                </div>
+                            </div>
+                            <hr>
+
+                            <div class="row">
+                                <div class="col-md-6 strengths">
+                                    <div class="explanation-text">
+                                        <ui>
+                                            <ui>
+                                                <li>
+                                                    <span class="badge explained-type rock-span">Rock</span>
+                                                    <br>
+                                                    <span>Martial artists break rocks</span>
+                                                    <br>
+                                                    <img class="img-fluid example-image"
+                                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Breaking_technique.jpg/250px-Breaking_technique.jpg">
+                                                </li>
+                                            </ui>
+                                        </ui>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6 weaknesses">
+                                    <div class="explanation-text">
+                                        <ui>
+                                            <li>
+                                                <span class="badge explained-type flying-span">Flying</span>
+                                                <br>
+                                                <span>It's very difficult to punch a bird</span>
+                                                <br>
+                                                <img class="img-fluid example-image"
+                                                    src="https://www.wikihow.com/images/thumb/8/89/Draw-an-Eagle-Step-18.jpg/v4-459px-Draw-an-Eagle-Step-18.jpg">
+                                            </li>
+                                        </ui>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 {% endblock %}
