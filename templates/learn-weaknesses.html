@@ -1,16 +1,37 @@
 {% extends "learn.html" %}
 
 {% block lesson %}
+
 <head>
     <script type="text/javascript" src="{{ url_for('static', filename = 'learn-weaknesses.js') }}"></script>
 
+    <style>
+        .example-image {
+            height: 15rem;
+            border-radius: 5%;
+        }
+    </style>
 </head>
-<body>
-    <div class="col-md-1">
 
+<body>
+    <div class="row">
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-10">
+            <h1>Weaknesses</h1>
+            <br>
+            <h2>A <b>type</b> is <b>weak</b> to other types that are <b>super-effective</b> against it.</h2>
+
+            <br>
+            <h3>e.g.) The <span class="badge grass-span">Grass</span> type is weak to the <span
+                    class="badge fire-span">Fire</span> type</h3>
+            <br>
+            <img class="img-fluid example-image"
+                src="https://www.wikihow.com/images/thumb/c/ce/Kill-a-Tree-Stump-Step-0-preview.jpg/460px-nowatermark-Kill-a-Tree-Stump-Step-0-preview.jpg">
+
+        </div>
     </div>
-    <div class="col-md-10">
-        weaknesses works
-    </div>
+
 </body>
 {% endblock %}
