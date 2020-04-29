@@ -22,7 +22,7 @@ function populate_options() {
         player_answered_incorrect()
         update_score()
         show_next_button()
-
+        $(this).addClass("wrong-clicked-answer")
         $("#answer-container").find(".wrong-answer").addClass("wrong-answer-reveal")
         $("#answer-container").find(".wrong-answer").removeClass("wrong-answer")
 
