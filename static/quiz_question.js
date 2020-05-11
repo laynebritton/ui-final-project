@@ -18,6 +18,8 @@ function populate_options() {
 
         $("#answer-container").find(".correct-answer").addClass("correct-answer-reveal")
         $("#answer-container").find(".correct-answer").removeClass("correct-answer")
+        
+        $(this).unbind()
 
     })
     $(".wrong-answer").click(function () {
@@ -32,7 +34,8 @@ function populate_options() {
 
         $("#answer-container").find(".correct-answer").addClass("wrong-answer-reveal-correct-answer")
         $("#answer-container").find(".correct-answer").removeClass("correct-answer")
-
+        
+        $(this).unbind()
     })
 }
 
