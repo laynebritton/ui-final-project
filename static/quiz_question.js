@@ -14,13 +14,13 @@ function populate_options() {
         increase_quiz_progress_bar()
 
         $("#answer-container").find(".wrong-answer").addClass("correct-answer-reveal-wrong-answer")
+        $("#answer-container").find(".wrong-answer").unbind()
         $("#answer-container").find(".wrong-answer").removeClass("wrong-answer")
 
         $("#answer-container").find(".correct-answer").addClass("correct-answer-reveal")
+        $("#answer-container").find(".correct-answer").unbind()
         $("#answer-container").find(".correct-answer").removeClass("correct-answer")
         
-        $(this).unbind()
-
     })
     $(".wrong-answer").click(function () {
         player_answered_incorrect()
@@ -30,12 +30,13 @@ function populate_options() {
 
         $(this).addClass("wrong-clicked-answer")
         $("#answer-container").find(".wrong-answer").addClass("wrong-answer-reveal")
+        $("#answer-container").find(".wrong-answer").unbind()
         $("#answer-container").find(".wrong-answer").removeClass("wrong-answer")
 
         $("#answer-container").find(".correct-answer").addClass("wrong-answer-reveal-correct-answer")
+        $("#answer-container").find(".correct-answer").unbind()
         $("#answer-container").find(".correct-answer").removeClass("correct-answer")
         
-        $(this).unbind()
     })
 }
 
