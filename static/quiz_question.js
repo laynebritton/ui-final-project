@@ -11,6 +11,7 @@ function populate_options() {
         player_answered_correct()
         update_score()
         show_next_button()
+        increase_quiz_progress_bar()
 
         $("#answer-container").find(".wrong-answer").addClass("correct-answer-reveal-wrong-answer")
         $("#answer-container").find(".wrong-answer").removeClass("wrong-answer")
@@ -23,6 +24,8 @@ function populate_options() {
         player_answered_incorrect()
         update_score()
         show_next_button()
+        increase_quiz_progress_bar()
+
         $(this).addClass("wrong-clicked-answer")
         $("#answer-container").find(".wrong-answer").addClass("wrong-answer-reveal")
         $("#answer-container").find(".wrong-answer").removeClass("wrong-answer")
@@ -155,7 +158,6 @@ function increase_quiz_progress_bar(){
 
 function load_next_question(){
     check_for_ending()
-    increase_quiz_progress_bar()
 
     var query ={
         "id": question.id
