@@ -1,6 +1,7 @@
 var line_break = $('<br>')
 var player_score = 0
 var player_questions_answered = 0
+var quiz_progress_percentage = 0
 
 function populate_options() {
     console.log(question['options'])
@@ -145,8 +146,16 @@ function clear_page(){
     $("#score-container").empty()
 }
 
+function increase_quiz_progress_bar(){
+    console.log($('#quiz-progress-bar').width())
+    quiz_progress_percentage += 10
+    $('#quiz-progress-bar').width(quiz_progress_percentage + '%')
+    
+}
+
 function load_next_question(){
     check_for_ending()
+    increase_quiz_progress_bar()
 
     var query ={
         "id": question.id
@@ -177,6 +186,7 @@ $(document).ready(function () {
     update_active_tab("#quiz-tab")
 
     populate_page()
+    $('#quiz-progress-bar').width(quiz_progress_percentage)
 
     $("#next-button").click(function () {
         load_next_question()

@@ -8,9 +8,29 @@
     <script>
         var question = {{ question | tojson }}
     </script>
+
+<style>
+    #quiz-progress-bar{
+        width: 0%;        
+    }
+    #quiz-progress-bar-container{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+</style>
 </head>
 
 <body>
+    <div class="row">
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-9">
+            <div id="quiz-progress-bar-container" class="progress">
+                <div id="quiz-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+        </div>
+    </div>
 
     {% block question %}
 
