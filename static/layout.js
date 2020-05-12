@@ -86,6 +86,7 @@ var pokemon_full_images = {
     "breloom": "https://cdn.bulbagarden.net/upload/thumb/d/de/286Breloom.png/250px-286Breloom.png",
     "tropius": "https://cdn.bulbagarden.net/upload/thumb/d/dd/357Tropius.png/250px-357Tropius.png",
     "omanyte": "https://cdn.bulbagarden.net/upload/thumb/7/79/138Omanyte.png/250px-138Omanyte.png",
+    "arcanine": "https://cdn.bulbagarden.net/upload/thumb/b/b8/059Arcanine.png/250px-059Arcanine.png",
 }
 
 var pokemon_icon_images ={

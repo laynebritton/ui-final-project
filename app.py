@@ -9,7 +9,7 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 quiz_questions = [
     {
-        "enemy": "Typhlosion",
+        "enemy": "Arcanine",
         "types": ["Fire"],
         "answer": "Water",
         "options": [

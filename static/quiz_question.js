@@ -45,8 +45,27 @@ function check_for_ending(){
         clear_page()
         hide_next_button()
         var score = $('<h2>')
-        $(score).text("Congratulations, you scored: " + player_score + " / " + player_questions_answered)
+        if(player_score == 10){
+            $(score).text("Perfect! You scored: " + player_score + " / " + player_questions_answered + ". You're ready to take on anyone!")
+            $("#score-container").append(score)
+            return
+        }
+        if(player_score <= 9 && player_score >= 7){
+            $(score).text("Great work! You scored: " + player_score + " / " + player_questions_answered + ". Take the lesson again then try for a perfect score!")
+        }
+        if(player_score <= 6){
+            $(score).text("You scored: " + player_score + " / " + player_questions_answered + ". You should re-read the lesson and shoot for a higher score!")
+        }
         $("#score-container").append(score)
+
+        $("#score-container").append(line_break)
+
+        var learn_button = $('<button id="learn-button" type="button" class="btn btn-primary btn-lg">')
+        $(learn_button).text("Retake the lesson")
+        $("#score-container").append(learn_button)
+        $("#learn-button").click(function() {
+            window.location.href = '/learn'
+        })
     }
 }
 
