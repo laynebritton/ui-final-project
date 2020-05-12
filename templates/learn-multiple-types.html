@@ -7,6 +7,15 @@
         .example-image{
 
         }
+        .deemphasized-text{
+            color: gray;
+        }
+        .regular-emphasis{
+            color: black;
+        }
+        .bold{
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -19,15 +28,15 @@
                 <h1>Mutltiple Types</h1>
                 <br>
                 <h2>Some Pokémon have two <b>types</b>.</h2>
-                <h3>These Pokémon have the strengths and weaknesses of both their types</h3>
+                <h3 class="deemphasized-text">These Pokémon have the strengths and weaknesses of both their types</h3>
                 <br>
                 <br>
                 <h3>Example: Poliwrath is both <span class="badge water-span">Water</span> and <span class="badge fighting-span">Fighting</span> type.</h3>
                 <img class="img-fluid example-image" src="https://cdn.bulbagarden.net/upload/thumb/2/2d/062Poliwrath.png/250px-062Poliwrath.png">
                 <br>
                 
-                <h4>Poliwrath is strong against: <span class="badge fire-span">Fire</span> and <span class="badge rock-span">Rock</span></h4>
-                <h4>And Poliwrath is weak to: <span class="badge grass-span">Grass</span> and <span class="badge flying-span">Flying</span></h4>
+                <h4 class="deemphasized-text" >Poliwrath is <span class="bold" >strong</span> against: <span class="badge fire-span regular-emphasis">Fire</span> and <span class="badge rock-span regular-emphasis">Rock</span></h4>
+                <h4 class="deemphasized-text">And Poliwrath is <span class="bold" >weak</span> to: <span class="badge grass-span regular-emphasis">Grass</span> and <span class="badge flying-span regular-emphasis">Flying</span></h4>
 
                 <br>
                 <br>
